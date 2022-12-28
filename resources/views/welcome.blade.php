@@ -81,15 +81,20 @@
     </div>
     <div class="brands"><a href="#"> <img src="landing/assets/img/instacart.png"><img src="landing/assets/img/kickstarter.png"><img src="landing/assets/img/lyft.png"><img src="landing/assets/img/shopify.png"><img src="landing/assets/img/pinterest.png"><img src="landing/assets/img/twitter.png"></a></div>
     <footer class="footer-basic">
-        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+        <div class="social">
+            <a href="https://www.youtube.com/@LallaTV?sub_confirmation=1"><i class="icon ion-social-youtube"></i></a>
+            <a href="https://fr-fr.facebook.com/LALLA.TELEVISION/"><i class="icon ion-social-facebook"></i></a>
+            <a href="https://www.instagram.com/lalla.tv/"><i class="icon ion-social-instagram"></i></a>
+            <a href="https://www.tiktok.com/@lalla.tv"><img src="{{ url('assets/img/logo-tiktok.svg') }}" style="height: 1.25rem;margin-bottom: 7px;"></img></a>
+        </div>
         <ul class="list-inline">
-            <li class="list-inline-item"><a href="#">Home</a></li>
+            {{-- <li class="list-inline-item"><a href="#">Home</a></li>
             <li class="list-inline-item"><a href="#">Services</a></li>
             <li class="list-inline-item"><a href="#">About</a></li>
             <li class="list-inline-item"><a href="#">Terms</a></li>
-            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li> --}}
         </ul>
-        <p class="copyright">INDEXCOMMUNICATION © 2022</p>
+        <p class="copyright"><a href="http://indexcommunication.com/">INDEXCOMMUNICATION</a> © {{ date('Y') }}</p>
     </footer>
     <script src="landing/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
