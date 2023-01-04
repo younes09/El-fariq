@@ -36,11 +36,62 @@
             box-shadow: inset 100px 0 0 0 #56c6c6;
             color: white;
         }
+        /* Floating images */
+        @keyframes float {
+            0% {
+                filter:  drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+                transform: translatey(0px);
+            }
+            50% {
+                filter:  drop-shadow(30px 30px 5px rgba(0, 0, 0, 0.5));
+                transform: translatey(-20px);
+            }
+            100% {
+                filter:  drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+                transform: translatey(0px);
+            }
+        }
+
+        .avatar {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* blinking button */
+        .button {
+            background-color: #1c87c9;
+            -webkit-border-radius: 60px;
+            border-radius: 60px;
+            border: none;
+            color: #eeeeee;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 20px;
+            padding: 5px 15px;
+            text-align: center;
+            text-decoration: none;
+        }
+        @keyframes glowing {
+        0% {
+          background-color: #2ba805;
+          box-shadow: 0 0 5px #2ba805;
+        }
+        50% {
+          background-color: #49e819;
+          box-shadow: 0 0 20px #49e819;
+        }
+        100% {
+          background-color: #2ba805;
+          box-shadow: 0 0 5px #2ba805;
+        }
+      }
+      .button {
+        animation: glowing 1300ms infinite;
+      }
     </style>
 </head>
 
 <body style="background: linear-gradient(90deg, #136a8a, #267871);direction: rtl;font-family: 'Tajawal', sans-serif;">
-    <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button">
+    <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button sticky-top">
         <div class="container"><a class="navbar-brand" href="#">EL FARIQ</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
@@ -66,16 +117,18 @@
     <div class="container-md my-5">
         <div class="row justify-content-center my-5">
             <div class="col-xl-6 col-sm-12 p-5">
-                <h1 class="my-5" style="font-weight: bolder;">مرحبا بك في مسابقة الفريق</h1>
+                <h1 class="my-5" style="font-weight: bolder;color: white;">مرحبا بك في مسابقة الفريق</h1>
+                <hr>
                 <h4 class="my-5">مسابقة الفريق هي مسابقة وطنية لكرة القدم للتسجيل في المسابقة يرجى الضغط على الزر شارك في المسابقة</h4>
-                <a class="btn btn-primary text-nowrap" href="{{ route('register') }}">شارك في المسابقة<i class="fa fa-soccer-ball-o m-2"></i></a>
+                <a class="text-nowrap button" href="{{ route('register') }}">شارك في المسابقة<i class="fa fa-soccer-ball-o m-2"></i></a>
             </div>
-            <div class="col-xl-6 col-sm-12 p-5"><img class="img-fluid" src="landing/assets/img/Football_Player.png"></div>
+            <div class="col-xl-6 col-sm-12 p-5"><img class="img-fluid avatar" src="landing/assets/img/Football_Player.png"></div>
         </div>
+        <hr>
         <div class="row justify-content-center my-5 align-self-center text-center">
-            <div class="col-xl-6 col-sm-12 p-5"><img class="img-fluid" src="landing/assets/img/kisspng-podium-award-trophy-illustration-a-trophy-standing-on-the-charts-5aa17a2c77d166.5435737015205320124908-removebg-preview.png"></div>
+            <div class="col-xl-6 col-sm-12 p-5"><img class="img-fluid avatar" src="landing/assets/img/kisspng-podium-award-trophy-illustration-a-trophy-standing-on-the-charts-5aa17a2c77d166.5435737015205320124908-removebg-preview.png"></div>
             <div class="col-xl-6 col-sm-12 p-5 align-self-center text-center">
-                <h1 style="font-weight: bolder;">من سيكون بطل مسابقة الفريق ؟</h1>
+                <h1 style="font-weight: bolder;color: white;">من سيكون بطل مسابقة الفريق ؟</h1>
             </div>
         </div>
     </div>
